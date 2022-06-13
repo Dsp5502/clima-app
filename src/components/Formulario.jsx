@@ -2,7 +2,7 @@ import { useState } from 'react';
 import useClima from '../hooks/useClima';
 
 const Formulario = () => {
-  const [alerta, setAlerta] = useState('false');
+  const [alerta, setAlerta] = useState('');
   const { busqueda, datosBusqueda, consultarClima } = useClima();
   const { ciudad, pais } = busqueda;
 
@@ -14,7 +14,6 @@ const Formulario = () => {
     }
 
     consultarClima(busqueda);
-    setAlerta('');
   };
   return (
     <div className='contenedor'>
